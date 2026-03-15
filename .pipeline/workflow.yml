@@ -1,0 +1,10 @@
+name: My First Pipeline
+on: push
+
+steps:
+  - name: greet
+    run: echo "Hello from the pipeline"
+    
+  - name: python-version
+    run: python --version
+    needs: [greet]
